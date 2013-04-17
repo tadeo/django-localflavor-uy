@@ -9,7 +9,7 @@ from django.core.validators import EMPTY_VALUES
 from django.forms.fields import Select, RegexField
 from django.forms import ValidationError
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.localflavor.uy.util import get_validation_digit
+from .util import get_validation_digit
 
 
 class UYDepartmentSelect(Select):
@@ -17,7 +17,7 @@ class UYDepartmentSelect(Select):
     A Select widget that uses a list of Uruguayan departments as its choices.
     """
     def __init__(self, attrs=None):
-        from django.contrib.localflavor.uy.uy_departments import DEPARTMENT_CHOICES
+        from .uy_departments import DEPARTMENT_CHOICES
         super(UYDepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
