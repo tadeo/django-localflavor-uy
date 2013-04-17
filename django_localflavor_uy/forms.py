@@ -12,13 +12,13 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.localflavor.uy.util import get_validation_digit
 
 
-class UYDepartamentSelect(Select):
+class UYDepartmentSelect(Select):
     """
-    A Select widget that uses a list of Uruguayan departaments as its choices.
+    A Select widget that uses a list of Uruguayan departments as its choices.
     """
     def __init__(self, attrs=None):
-        from django.contrib.localflavor.uy.uy_departaments import DEPARTAMENT_CHOICES
-        super(UYDepartamentSelect, self).__init__(attrs, choices=DEPARTAMENT_CHOICES)
+        from django.contrib.localflavor.uy.uy_departments import DEPARTMENT_CHOICES
+        super(UYDepartmentSelect, self).__init__(attrs, choices=DEPARTMENT_CHOICES)
 
 
 class UYCIField(RegexField):
